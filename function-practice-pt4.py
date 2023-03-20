@@ -1,3 +1,6 @@
+from math import factorial
+
+
 def max_num(num1, num2, num3):
     answer = max(num1, num2, num3)
     return answer
@@ -23,4 +26,41 @@ def rev_string(s):
     print(''.join(s))
 
 
-rev_string("yooo")
+# rev_string("yooo")
+
+def num_within(num1, num2, num3):
+    if num1 > num2 and num1 <= num3:
+        return True
+    else:
+        return False
+
+
+# print(num_within(4, 2, 5))
+
+# (x + y) ** n
+# n! / r!(n - r)!
+
+# def factorial(n):
+#     if n == 1:
+#         return 1
+#     else:
+#         return n * factorial(n - 1)
+
+
+def pascal(n):
+    for i in range(n):
+        for j in range(n-i+1):
+
+            print(end=" ")
+
+        for j in range(i+1):
+
+            # nCr = n!/((n-r)!*r!)
+            x = i - j
+            print(factorial(i)//(factorial(j)*factorial(x)), end=" ")
+
+        # for new line
+        print()
+
+
+pascal(5)
